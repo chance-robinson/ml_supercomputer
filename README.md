@@ -17,6 +17,7 @@ conda install keras
 (additional packages may need to be installed using conda install ...)
 
 # Initialize project
+mkdir slurm_out
 chmod a+x run_all.sh
 chmod a+x train_hyperparams.sh
 chmod a+x pyfiles/training.py

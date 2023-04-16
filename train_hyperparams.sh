@@ -5,6 +5,7 @@
 #SBATCH --nodes=1   # number of nodes
 #SBATCH --gpus=1
 #SBATCH --mem-per-cpu=15360M   # memory per CPU core
+#SBATCH -o ./slurm_out/slurm-%j.out # STDOUT
 
 
 # Set the max number of threads to use for programs using OpenMP. Should be <= ppn. Does nothing if the program doesn't use OpenMP.
