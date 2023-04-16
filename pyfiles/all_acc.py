@@ -3,7 +3,7 @@ import os
 os.chdir('..')
 cwd = os.getcwd()
 
-directory = f'{cwd}/results/'  # Replace with the path to your directory
+directory = f'{cwd}/results2/'  # Replace with the path to your directory
 
 max_value = None
 max_file = None
@@ -20,8 +20,8 @@ for filename in os.listdir(directory):
 
 sorted_accuracies = sorted(accuracies.keys(), reverse=True)
 
-print(f"\nThe highest accuracy is {max_value}, found in file: {max_file}")
+print(f"\nThe highest val_accuracy is {max_value}, found in file: {max_file}")
 
-print("Accuracies from highest to lowest:")
+print("Validation Accuracies from highest to lowest:")
 for acc in sorted_accuracies:
     print(f"{accuracies[acc]}: {acc}")

@@ -3,7 +3,7 @@ import os
 os.chdir('..')
 cwd = os.getcwd()
 
-directory = f'{cwd}/results/'  # Replace with the path to your directory
+directory = f'{cwd}/results2/'  # Replace with the path to your directory
 
 max_value = None
 max_file = None
@@ -16,5 +16,5 @@ for filename in os.listdir(directory):
                 max_value = value
                 max_file = filename
 
-print(f"The highest accuracy is {max_value}, found in file: {max_file}")
+print(f"The highest val_accuracy is {max_value}, found in file: {max_file}")
 

@@ -5,7 +5,6 @@ from keras import layers
 import sys
 import os
 
-os.chdir('..')
 cwd = os.getcwd()
 
 dataset = np.load(f'{cwd}/content/cifar100.npz')
@@ -61,9 +60,9 @@ history = model.fit(x_train, y_train,
                     validation_data=(x_val, y_val),
                     )
 
-model.save(f'{cwd}/models/model_{BATCH_SIZE}_{EPOCHS}_{LEARNING_RATE}_{L1NF}_{FDROPOUT}.h5')
+model.save(f'{cwd}/models2/model_{BATCH_SIZE}_{EPOCHS}_{LEARNING_RATE}_{L1NF}_{FDROPOUT}.h5')
 
-with open(f'{cwd}/results/accuracy_{BATCH_SIZE}_{EPOCHS}_{LEARNING_RATE}_{L1NF}_{FDROPOUT}.txt', 'w') as f:
-    f.write(str(history.history['accuracy'][-1]))
+with open(f'{cwd}/results2/accuracy_{BATCH_SIZE}_{EPOCHS}_{LEARNING_RATE}_{L1NF}_{FDROPOUT}.txt', 'w') as f:
+    # f.write(str(history.history['accuracy'][-1]))
     # f.write(str(history.history['val_loss'][-1]))
-    # f.write(str(history.history['val_accuracy'][-1]))
+    f.write(str(history.history['val_accuracy'][-1]))
